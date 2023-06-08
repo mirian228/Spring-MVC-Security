@@ -2,13 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login</title>
+    <Style>
+        .failed {
+            color:red;
+        }
+
+    </Style>
 </head>
 <body>
 
 <h3>My Custom Login Page</h3>
 <form action="#" th:action="@{/authenticateTheUser}" method="POST">
-    <div th:if="${param.error}">
-        <i>Sorry! You entered invalid username/password.</i>
+    <!-- check for login error -->
+    <div th:if="${param.error}" >
+        <i class="failed">Sorry! You entered invalid username/password.</i>
     </div>
     <p>
         <input type="text" name="username">
