@@ -16,4 +16,9 @@ public class RoleController {
         return "systems";
     }
 
+
+    @GetMapping("/access-denied")
+    public String accessDeniedPage() {
+        return "access-denied";
+    }
 }
