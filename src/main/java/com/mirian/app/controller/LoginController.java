@@ -11,8 +11,5 @@ public class LoginController {
         return "fancy-login";
     }
 
-    @GetMapping("/logout")
-    public String showHomePageAfterLogOut() {
-        return "home";
-    }
+
 }
